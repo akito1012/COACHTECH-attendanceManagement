@@ -1,0 +1,73 @@
+.attendance__recode {
+    max-width: 1230px;
+    background-color: gainsboro;
+}
+
+.attendance-recode__form {
+    width: 100%;
+    margin: 0;
+}
+
+.attendance-recode__title {
+    width: 100%;
+    margin: 20px 10%;
+
+}
+
+.attendance-recode__header {
+    padding: 20px auto;
+    font-size: 30px;
+}
+
+.attendance-recode__month {
+    width: 80%;
+    margin: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.last-month,
+.this-month,
+.next-month {
+    border: none;
+    background-color: white;
+    padding: 10px 15px;
+}
+
+.attendance-recode__table {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.attendance-recode__row {
+    width: 100%;
+    margin: 5px 0;
+    background-color: white;
+    border-bottom: solid 1px #000;
+}
+
+.attendance-recode__table-header {
+    text-align: left;
+    border-bottom: solid 1px #000;
+    margin: 5px;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.attendance-recode__date {
+    border: none;
+}
+
+.input__attendance-item {
+    border: none;
+    padding: 0 10px;
+}
+
+.attendance-detail__button {
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: left;
+    background-color: white;
+}

@@ -1,0 +1,56 @@
+.apply__list {
+    max-width: 1230px;
+    background-color: gainsboro;
+}
+
+.apply-list__form {
+    width: 100%;
+    margin: 0;
+}
+
+.apply-list__title {
+    width: 100%;
+    margin: 50px 20%;
+}
+
+.apply-list__header {
+    padding: 20px auto;
+    font-size: 30px;
+}
+
+.apply-list__table {
+    width: 60%;
+    margin-left: 20%;
+}
+
+.apply-list__table-row .apply-list__table-header {
+    padding: 20px 50px;
+    text-align: left;
+    background-color: white;
+}
+
+.apply-list__table-date {
+    padding: 20px 50px;
+    background-color: white;
+}
+
+.input__year,
+.input__mouth,
+.input__clock-in,
+.input__clock-out,
+.input__break-in,
+.input__break-out {
+    padding: 0 20px;
+    border: none;
+}
+
+.form__line {
+    display: inline;
+    padding: 0 10px;
+}
+
+.input__name,
+.textarea__remarks {
+    border: none;
+    text-align: left;
+}

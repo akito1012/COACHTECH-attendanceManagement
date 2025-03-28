@@ -1,0 +1,62 @@
+.login{
+    max-width: 1230px;
+}
+.login__form{
+    width: 100%;
+}
+.login__title{
+    width: 100%;
+    margin: 20px auto;
+}
+.login__header{
+    width: 100%;
+    padding: 20px auto;
+    text-align: center;
+    font-size: 30px;
+}
+.login__inner{
+    width: 100%;
+}
+.login__input{
+    width: 100%;
+    margin: 5px 0;
+    text-align: center;
+}
+.input__label{
+    display: block;
+    text-align: left;
+    margin-left: 19%;
+    font-size: 20px;
+}
+.input__item{
+    width: 60%;
+    padding: 10px;
+}
+.error{
+    color: red;
+    text-align: left;
+    margin-left: 19%;
+    font-size: 20px;
+}
+.login__button{
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+}
+.login__button-submit{
+    width: 60%;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+.register__link{
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+}
+.register__link-url{
+    padding: 10px;
+    color: aqua;
+}

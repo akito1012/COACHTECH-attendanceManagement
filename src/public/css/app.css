@@ -1,0 +1,39 @@
+body,
+main{
+    background-color: gainsboro;
+}
+.header{
+    max-width: 1230px;
+    margin: 0;
+    background-color: black;
+}
+.header__form{
+    display: flex;
+    justify-content: space-between;
+}
+.header__logo{
+    display: inline;
+    margin: 5px 10px;
+    padding: 5px 10px;
+}
+.coachtech__logo{
+    padding: 5px 10px;
+}
+.header__button{
+    display: inline;
+    margin: 5px 10px;
+    padding: 5px 10px;
+}
+.clock__button,
+.attendance-list__button,
+.staff-list__button,
+.correct__button,
+.correct-list__button,
+.logout__button{
+    padding: 5px 10px;
+    color: white;
+    background-color: black;
+    border: none;
+    font-size: 25px;
+};
+

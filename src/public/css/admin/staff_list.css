@@ -1,0 +1,57 @@
+.attendance__detail {
+    max-width: 1230px;
+    background-color: gainsboro;
+}
+
+.attendance-detail__form {
+    width: 100%;
+    margin: 0;
+}
+
+.attendance-detail__title {
+    width: 100%;
+    margin: 20px 10%;
+}
+
+.attendance-detail__header {
+    padding: 20px auto;
+    font-size: 30px;
+}
+
+
+.attendance-detail__table {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.attendance-detail__table-row {
+    width: 100%;
+    margin: 5px 0;
+    background-color: white;
+    border-bottom: solid 1px #000;
+}
+
+.attendance-detail__table-header {
+    text-align: left;
+    border-bottom: solid 1px #000;
+    margin: 5px;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.attendance-detail__table-date {
+    border: none;
+}
+
+.input__date {
+    border: none;
+    padding: 0 10px;
+}
+
+.attendance-detail__button {
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: left;
+    background-color: white;
+}
