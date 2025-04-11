@@ -23,10 +23,11 @@ Route::get('/', function () {
 
 Route::get('/', [AttendancesController::class, 'index']);
 Route::get('/attendance', [AttendancesController::class, 'clock']);
+Route::post('/attendance', [AttendancesController::class, 'clockCheck']);
 Route::get('/register', [AuthController::class, 'register']);
 Route::get('/login', [AuthController::class, 'login']);
 Route::get('/admin/login', [AuthController::class, 'adminLogin']);
-Route::get('/attendance/list', [AttendancesController::class, 'attendanceRecode']);
+Route::get('/attendance/list', [AttendancesController::class, 'attendanceRecode'])->name('user.attendance_recode');
 Route::get('/attendance/id', [AttendancesController::class, 'attendanceDetails']);
 Route::get('/stamp_correction_request/list', [AttendancesController::class, 'applyList']);
 Route::get('/admin/attendance/list', [AdminsController::class, 'adminAttendanceListGet']);

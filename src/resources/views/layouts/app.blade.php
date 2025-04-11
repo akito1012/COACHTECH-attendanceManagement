@@ -11,18 +11,30 @@
 </head>
 <body>
     <header class="header">
-        <form action="/" method="get" class="header__form">
+        
             <div class="header__logo">
                 <img src="{{ asset('img/coachtech_logo.svg') }}" alt="COACHTECH" class="coachtech__logo">
             </div>
-            <div class="header__button">
+            < class="header__button">
+                @if(Auth::check())
                 <button class="clock__button">勤怠</button>
-                <button class="attendance-list__button">勤怠一覧</button>
+                <form action="/attendanse/list" method="get" class="attendance-list">
+                    @csrf
+                    <a href="{{ route('user.attendance_recode') }}" class="attendance-list__button">勤怠一覧</a>
+                </form>
                 <button class="staff-list__button">スタッフ一覧</button>
                 <button class="correct__button">申請</button>
                 <button class="correct-list__button">申請一覧</button>
-                <button class="logout__button">ログアウト</button>
-            </div>
+                <form action="/logout" method="post" class="logout__form">
+                    @csrf
+                    <button class="logout__button">ログアウト</button>
+                </form>
+                @else
+                <a href="/login" class="login__link">
+                    <button type="submit" class="login__button">ログイン</button>
+                </a>
+                @endif
+            
         </form>
     </header>
 </body>
