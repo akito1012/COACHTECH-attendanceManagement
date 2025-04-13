@@ -26,8 +26,9 @@
                 <th class="attendance-recode__table-header">詳細</th>
             </tr>
             <tr class="attendance-recode__row">
+                @foreach($clocks as $clock)
                 <td class="attendance-recode__date">
-                    <input type="text" value="日付" class="input__attendance-item">
+                    <input type="text" value="{{ $clock[clock_in] }}" class="input__attendance-item">
                 </td>
                 <td class="attendance-recode__date">
                     <input type="text" value="出勤" class="input__attendance-item">
@@ -44,6 +45,7 @@
                 <td class="attendance-recode__date">
                     <button class="attendance-detail__button">詳細</button>
                 </td>
+                @endforeach
             </tr>
         </table>
     </form>

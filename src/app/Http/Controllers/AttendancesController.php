@@ -92,7 +92,8 @@ class AttendancesController extends Controller
         }
     }
     public function attendanceRecode(){
-        return view('user.attendance_recode');
+        $clocks = Clock::all();
+        return view('user.attendance_recode', compact('clocks'));
     }
     public function attendanceDetails(){
         return view('user.attendance_details');
