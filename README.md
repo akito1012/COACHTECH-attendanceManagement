@@ -13,7 +13,7 @@ coachtechスクールカリキュラム、模擬案件で実践に近い開発�
 ###Dockerビルド
 
 １．
-`git@github.com:akito1012/coachtechFurima.git`
+`git@github.com:akito1012/COACHTECH-attendanceManagement.git`
 
 ２．DockerDesktopアプリを立ち上げる
 
