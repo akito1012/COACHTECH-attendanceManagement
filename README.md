@@ -66,7 +66,7 @@ DB_PASSWORD=laravel_pass
 
 ###ER図
 
-
+/home/akito/coachtech/laravel/coachtech-attendanceManagement/.drawio.svg
 
 ###URL
 
