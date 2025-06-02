@@ -44,7 +44,9 @@ ARM64の場合以下の文をmysqlとphpmyadminのimageの下に張り付ける
 `DB_PASSWORD=laravel_pass`
 
 ５.　php artisan key;generate
+
 ６　.php artisan migrate
+
 ７.　php artisan db:seed
 
 ## user用のログイン初期データ
