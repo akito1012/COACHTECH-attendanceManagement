@@ -35,15 +35,16 @@ ARM64の場合以下の文をmysqlとphpmyadminのimageの下に張り付ける
 ３．「.env.example」ファイルを 「.env」ファイルに命名を変更。または、新しく.envファイルを作成
 
 ４．.envに以下の環境変数を追加
-
+```
 `DB_CONNECTION=mysql`
 `DB_HOST=mysql`
 `DB_PORT=3306`
 `DB_DATABASE=laravel_db`
 `DB_USERNAME=laravel_user`
 `DB_PASSWORD=laravel_pass`
+```
 
-５.　php artisan key;generate
+５.　php artisan key:generate
 
 ６　.php artisan migrate
 
