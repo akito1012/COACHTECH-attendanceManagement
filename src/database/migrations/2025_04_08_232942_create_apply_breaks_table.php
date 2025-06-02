@@ -13,12 +13,13 @@ class CreateApplyBreaksTable extends Migration
      */
     public function up()
     {
-        Schema::create('applyBreaks', function (Blueprint $table) {
+        Schema::create('apply_breaks', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('break_times_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('apply_clock_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('break_time_id')->constrained()->cascadeOnDelete();
             $table->datetime('break_in');
             $table->dateTime('break_out')->nullable();
-            $table->string('correction_check');
+            $table->string('correction_check')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ class CreateApplyBreaksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('applyBreaks');
+        Schema::dropIfExists('apply_breaks');
     }
 }

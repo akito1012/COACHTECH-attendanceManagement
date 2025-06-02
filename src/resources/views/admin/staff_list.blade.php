@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/admin/staff_list.css') }}">
@@ -7,7 +7,7 @@
 @section('content')
 
 <div class="attendance__detail">
-    <form action="" class="attendance-detail__form">
+    <form action="/admin/staff/list" method="get" class="attendance-detail__form">
         <div class="attendance-detail__title">
             <h3 class="attendance-detail__header">｜スタッフ一覧</h3>
         </div>
@@ -18,15 +18,17 @@
                 <th class="attendance-detail__table-header">月次勤怠</th>
             </tr>
             <tr class="attendance-detail__table-row">
+                @foreach($users as $user)
                 <td class="attendance-detail__table-date">
-                    <input type="text"value="名前" class="input__date">
+                    <input type="text"value="{{ $user->name }}" class="input__date">
                 </td>
                 <td class="attendance-detail__table-date">
-                    <input type="text"value="メールアドレス" class="input__date">
+                    <input type="text"value="{{ $user->email }}" class="input__date">
                 </td>
                 <td class="attendance-detail__table-date">
-                    <input type="text"value="月次勤怠" class="input__date">
+                    <a href="{{ route('admin.attendance_staff', ['id'=>$user->id]) }}" class="input_date">月次勤怠</a>
                 </td>
+                @endforeach
             </tr>
         </table>
     </form>

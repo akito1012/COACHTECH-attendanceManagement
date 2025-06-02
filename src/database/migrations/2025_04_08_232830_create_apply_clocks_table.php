@@ -13,12 +13,14 @@ class CreateApplyClocksTable extends Migration
      */
     public function up()
     {
-        Schema::create('applyClocks', function (Blueprint $table) {
+        Schema::create('apply_clocks', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->foreignId('clock_id')->constrained()->cascadeOnDelete();
             $table->datetime('clock_in');
             $table->dateTime('clock_out')->nullable();
-            $table->string('correction_check');
+            $table->string('remark')->nullable();
+            $table->string('correction_check')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +32,6 @@ class CreateApplyClocksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('applyClocks');
+        Schema::dropIfExists('apply_clocks');
     }
 }

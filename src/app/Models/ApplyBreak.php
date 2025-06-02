@@ -9,5 +9,10 @@ class ApplyBreak extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['breakTime_id', 'break_in', 'break_out', 'correction_check'];
+    protected $fillable = ['apply_clock_id', 'break_time_id', 'break_in', 'break_out', 'correction_check'];
+
+     protected $casts = [
+        'break_in' => 'datetime',
+        'break_out' => 'datetime'
+    ];
 }

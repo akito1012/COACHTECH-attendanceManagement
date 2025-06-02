@@ -29,7 +29,12 @@
     background-color: white;
 }
 .input__year,
-.input__mouth,
+.input__mouth{
+    display: inline;
+    padding: 0 20px;
+    border: none;
+
+}
 .input__clock-in,
 .input__clock-out,
 .input__break-in,
@@ -46,3 +51,31 @@
     border: none;
     text-align: left;
 }
+.correction__button{
+    width: 60%;
+    margin: 0 20%;
+}
+.correction__button-submit{
+    margin-left: 80%;
+    margin-top: 20px;
+    padding: 5px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+}
+.apply-detail__check{
+    width: 60%;
+    margin: 0 20%;
+}
+.apply-detail__correction{
+    margin-left: 50%;
+    margin-top: 20px;
+    padding: 5px 30px;
+    color: red;
+}
+.error{
+    color: red;
+}
+

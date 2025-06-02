@@ -6,15 +6,18 @@
 
 @section('content')
 
+
 <div class="attendance__recode">
-    <form action="" class="attendance-recode__form">
+    <form action="{{ route('user.attendance_recode') }}" method="post" class="attendance-recode__form">
+        @csrf
         <div class="attendance-recode__title">
             <h3 class="attendance-recode__header">|勤怠一覧</h3>
         </div>
         <div class="attendance-recode__month">
-            <button class="last-month">←前月</button>
-            <input type="text" value="今月" class="this-month">
-            <button class="next-month">翌月→</button>
+            <button class="last-month" type="submit" name="subMonth">←前月</button>
+            <input type="text" name="now" value="{{ $now->format('Y/m') }}" class="this-month">
+            <input type="hidden" name="month" value="{{ $now }}">
+            <button class="next-month" type="submit" name="addMonth">翌月→</button>
         </div>
         <table class="attendance-recode__table">
             <tr class="attendance-recode__row">
@@ -25,28 +28,30 @@
                 <th class="attendance-recode__table-header">合計</th>
                 <th class="attendance-recode__table-header">詳細</th>
             </tr>
+            @foreach($clocks as $clock)
             <tr class="attendance-recode__row">
-                @foreach($clocks as $clock)
                 <td class="attendance-recode__date">
-                    <input type="text" value="{{ $clock[clock_in] }}" class="input__attendance-item">
+                    <input type="dateTime" value="{{ $clock->clock_in->format('m月d日(w)') }}" class="input__attendance-item">
                 </td>
                 <td class="attendance-recode__date">
-                    <input type="text" value="出勤" class="input__attendance-item">
+                    <input type="text" value="{{ $clock->clock_in->format('h:i') }}" class="input__attendance-item">
                 </td>
                 <td class="attendance-recode__date">
-                    <input type="text" value="退勤" class="input__attendance-item">
+                    <input type="text" value="{{ $clock->clock_out->format('h:i') }}" class="input__attendance-item">
                 </td>
                 <td class="attendance-recode__date">
-                    <input type="text" value="休憩"class="input__attendance-item">
+                    <input type="text" value=" {{ floor($clock->break_time / 3600) }} : {{ sprintf('%02d', (floor(($clock->break_time % 3600) / 60))) }}"class="input__attendance-item">
                 </td>
                 <td class="attendance-recode__date">
-                    <input type="text" value="合計" class="input__attendance-item">
+                    <input type="text" value="{{ floor($clock->clock_time /3600) }} : {{ sprintf('%02d', (floor(($clock->clock_time % 3600) / 60))) }}" class="input__attendance-item">
                 </td>
+                <input type="hidden" name="detail" value="attendance">
                 <td class="attendance-recode__date">
-                    <button class="attendance-detail__button">詳細</button>
+                    <a href="{{ route('attendance_detail', ['id'=>$clock->id]) }}" class="attendance-detail__button">詳細
+                    </a>
                 </td>
-                @endforeach
             </tr>
+            @endforeach
         </table>
     </form>
 </div>

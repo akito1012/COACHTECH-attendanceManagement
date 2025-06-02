@@ -1,7 +1,7 @@
-@extends('layouts.admin')
+@extends('layouts.app')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('css/admin/attendance_details.css') }}">
+<link rel="stylesheet" href="{{ asset('css/user/apply_list.css') }}">
 @endsection
 
 @section('content')
@@ -62,7 +62,7 @@
             </tr>
         </table>
         <div class="correction__button">
-            <button class="correction__button-submit" type="submit" name="admin">修正</button>
+            <button class="correction__button-submit" type="submit">修正</button>
         </div>
     </form>
 </div>

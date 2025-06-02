@@ -17,14 +17,23 @@
                 <label for="" class="input__label">メールアドレス</label>
                 <input type="email" name="email" value="{{ old('email') }}" class="input__item" />
             </div>
-            <div class="error">ERROR</div>
+            <div class="error">
+                @error('email')
+                {{ $message }}
+                @enderror
+            </div>
             <div class="login__input">
                 <label for="" class="input__label">パスワード</label>
                 <input type="password" input type="password" name="password" class="input__item" />
             </div>
-            <div class="error">ERROR</div>
+            <div class="error">
+                @error('password')
+                {{ $message }}
+                @enderror
+            </div>
             <div class="login__button">
-                <button class="login__button-submit">ログインする</button>
+                <button class="login__button-submit" type="submit" name="user">ログインする</button>
+                <input type="hidden" name="login_check" value="user">
             </div>
             <div class="register__link">
                 <a href="/register" class="register__link-url">会員登録はこちら</a>

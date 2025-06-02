@@ -41,4 +41,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function clocks(){
+        return $this->hasMany(Clock::class);
+    }
+    
+    public function ApplyClocks() {
+        return $this->hasMany(ApplyClock::class);
+    }
 }

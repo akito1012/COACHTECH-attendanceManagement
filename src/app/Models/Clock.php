@@ -20,4 +20,18 @@ class Clock extends Model
     }
 
     protected $fillable = ['user_id', 'clock_in', 'clock_out', 'break_time', 'clock_time'];
+
+    protected $casts = [
+        'clock_in' => 'datetime',
+        'clock_out' => 'datetime',
+    ];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+    public function getUserName(){
+        return $this->name;
+    }
+
 }
